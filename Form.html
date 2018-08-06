@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="/jadrn046/JS/Form.js"></script>
+         <script src="/jadrn046/JS/shopping_cart.js"></script>
+        <link rel="stylesheet" type="text/css" href="/jadrn046/CSS/Header.css">
+        <link rel="stylesheet" type="text/css" href="/jadrn046/CSS/Form.css">
+    </head>
+    <body> 
+       
+        <header>
+            <div id="Title"><a href="proj2.html">The Camara Store</a></div>                
+        </header>
+        <div id="FormBox">
+        <form  id="form" action="http://jadran.sdsu.edu/jadrn046/jsp/Submit.jsp"  >
+            Shipping Address
+            
+            <table >
+                <tr>
+                    <td>
+                        <input id = "FName" name = "FName" type = "text" class = "InputName" placeholder = "First Name*" required />
+
+                    </td>
+                    <td>
+                        <input id = "LName" name = "LName" type = "text" class = "InputName" placeholder = "Last Name*" required />
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="2">
+                        <input id ="Add01" name="Add01" type ="text"  class ="InputWider" placeholder = "Address Line1*"  required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id ="Add02" name="Add02" type = "text"  class ="InputWider" placeholder ="Address Line2"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id ="City" name="City" type ="text"  class = "InputWider" placeholder ="City*" required />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td >
+                        <Select name="State"  id="State" class = "InputName" required>
+                            <option disabled selected value="State">State*</option>
+                            <option value="AK">AK</option>
+                            <option value="AL">AL</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+
+                            <option value="GA">GA</option>
+                            <option value="GU">GU</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="ND">ND</option>
+                            <option value="NE">NE</option>
+
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="PR">PR</option>
+
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VA">VA</option>
+                            <option value="VI">VI</option>
+                            <option value="VT">VT</option>                                        
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </Select>
+                    </td>
+                    <td>
+                        <input id = "Zip" name = "Zip" type = "text" class = "InputName" placeholder ="Zip Code*" maxlength="5" pattern="[0-9]{5}" title="Numbers only" required  />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id ="Phone" class ="InputWider" name ="Phone" type ="text" placeholder ="Primary Phone No.* (without contry code)"  maxlength="10" pattern="[0-9]{10}" title="Numbers only without CountryCode" required />
+                    </td>
+                </tr>
+                        <tr>
+                    <td colspan="2">
+                        <input id = "EmailID" name = "EmailID" type = "email" class ="InputWider" placeholder ="Email ID*" required />
+                    </td>
+                </tr>
+            </table>
+            
+            Billing Address<br>
+            <input id="SameAddress" type="checkbox">
+            <label for="SameAddress">Same as Shipping Address</label>
+            <table>
+                <tr>
+                    <td>
+                        <input name = "FName2" type = "text" class = "InputName" placeholder = "First Name*" required />
+
+                    </td>
+                    <td>
+                        <input name = "LName2" type = "text" class = "InputName" placeholder = "Last Name*" required />
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="2">
+                        <input name="Add012" type ="text"  class ="InputWider" placeholder = "Address Line1*"  required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input name="Add022" type = "text"  class ="InputWider" placeholder ="Address Line2"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input name="City2" type ="text"  class = "InputWider" placeholder ="City*" required />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td >
+                        <Select name="State2" id="State2" class = "InputName" required>
+                            <option disabled selected value="State">State*</option>
+                            <option value="AK">AK</option>
+                            <option value="AL">AL</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+
+                            <option value="GA">GA</option>
+                            <option value="GU">GU</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="ND">ND</option>
+                            <option value="NE">NE</option>
+
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="PR">PR</option>
+
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VA">VA</option>
+                            <option value="VI">VI</option>
+                            <option value="VT">VT</option>                                        
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </Select>
+                    </td>
+                    <td>
+                        <input name = "Zip2" type = "text" class = "InputName" placeholder ="Zip Code*" pattern="[0-9]{5}" title="Numbers only" required  />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class ="InputWider" name ="Phone2" type ="text" placeholder ="Primary Phone No.* (without contry code)" pattern="[0-9]{10}" title="Numbers only without CountryCode" required />
+                    </td>
+                </tr>                
+            </table>
+            Payment 
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <input name="Card" type = "text"  class ="InputWider" placeholder ="Card number" pattern="[0-9]{16}" title="Numbers only without '-'" filtertype="CCNo" maxlength="16" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input name="NameOnCard" type = "text"  class ="InputWider" placeholder ="Name On Card" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input name="ExpirationDate" type = "text"  class ="InputWider" placeholder ="Expiration Date(MM/YY)" pattern="(0?[1-9]|1[0-2])/(0?[1-9]|1[0-9]|2[0-9]|3[01])" title="Enter valid date (01/01)" maxlength="5" required />
+                    </td>
+                   <!--  
+                   (0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01]) 
+                        (0[1-9]|1[012])[/](0[1-9]|[12][0-9]|3[01])
+                   -->
+                    <td>
+                        <input name="CVV" type = "text"  class ="InputWider" placeholder ="CVV" pattern="[0-9]{3}" title="Numbers only" maxlength="3" required/>
+                    </td>
+                </tr>
+                 <tr>
+                    <td colspan="2">
+                        <input name="submit" id="submit" type = "submit"  class ="InputWider" Value ="Place your order!" />
+                    </td>
+                </tr>
+                <!-- <input name="TotalAmount" id="TotalAmount" type = "hidden" required/> -->
+            </table>
+        </form>
+    </div>
+    </body>
+</html>

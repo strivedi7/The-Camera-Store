@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+	<!-- 
+         Trivedi, Saurabh
+         Project #2
+         Spring 2018
+    -->
+<html>
+    <head>
+        <title>The Camara Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="/jadrn046/JS/index.js"></script>
+        <script src="/jadrn046/JS/shopping_cart.js"></script>
+        <link rel="stylesheet" type="text/css" href="/jadrn046/CSS/index.css">
+        <link rel="stylesheet" type="text/css" href="/jadrn046/CSS/Header.css">
+        <!-- <script src="/jadrn046/Form.js"></script> -->
+        <style>
+			body {font-family: Arial, Helvetica, sans-serif;}
+
+			/* The Modal (background) */
+			.modal {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 1; /* Sit on top */
+			    padding-top: 50px; /* Location of the box */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0,0,0); /* Fallback color */
+			    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			}
+
+			/* Modal Content */
+			.modal-content {
+			    position: relative;
+			    background-color: white;#fefefe;
+			    margin: auto;
+			    padding: 0;
+			    border: 1px solid #888;
+			    width: 80%;
+			    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+			    -webkit-animation-name: animatetop;
+			    -webkit-animation-duration: 0.4s;
+			    animation-name: animatetop;
+			    animation-duration: 0.4s
+			}
+
+			/* Add Animation */
+			@-webkit-keyframes animatetop {
+			    from {top:-300px; opacity:0} 
+			    to {top:0; opacity:1}
+			}
+
+			@keyframes animatetop {
+			    from {top:-300px; opacity:0}
+			    to {top:0; opacity:1}
+			}
+
+			/* The Close Button */
+			.close {
+			    color: black;
+			    float: right;
+			    font-size: 40px;
+			    font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+			    color: gray;#000;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+			.modal-header {
+			    padding: 2px 16px;
+			    background-color: white;#5cb85c;
+			    color: black;
+			}
+
+			.modal-body {padding: 2px 16px;
+				display: table;}
+
+			.modal-footer {
+			    padding: 2px 16px;
+			    background-color:white;
+			    color: black;
+			}
+			.BigPicture{
+				float: left;
+			}
+			</style>
+    </head>
+    <body>
+    	<header>
+    		<div id="Title"><a href="proj2.html">The Camara Store</a></div>
+    		<a href="Cart.html">
+	    		<div id="CartBox">
+	    			<table >
+	        				<tr valign="bottom">
+	        					<td>
+	        						<input type="image" src="/jadrn046/Cart.png"  id="CartImage" alt="Submit" height="40"/>
+	        					</td>
+	        					<td>
+	        						<div id="CartSize">0</div>
+	        					</td>
+	        				</tr>
+	        			</table>    			 
+	    		</div>
+    		</a>
+    		<form id="SearchForm">
+        		<div id="SearchBox">
+        			<table >
+        				<tr>
+        					<td>
+        						<input name = "SearchButton" id="SearchButton" type = "text" class = "InputName" placeholder = "Enter keyword to search" required />
+        					</td>
+        					<td>
+        						 <input type="image" src="/jadrn046/Search.jpg"  id="SearchButton1" alt="Submit" height="23"/>
+
+        					</td>
+        				</tr>
+        			</table>
+        		</div>
+    		</form>	
+    			
+    	</header>
+    	<div id="Navigator">
+    		<div id="NavigatorTitle">Refine by</div>
+	    		<div class="filterBox" >
+	    			Vendor
+	    					<div class="FilterTitle" id="vF">
+					        <input type="checkbox" name="Nikon" id="Nikon" value="Nikon">
+							<label for="Nikon">Nikon</label><br>
+					        <input type="checkbox" name="Canon" id="Canon" value="Canon">
+										<label for="Canon">Canon</label><br>
+					        <input type="checkbox" name="Olympus" id="Olympus" value="Olympus">
+										<label for="Olympus">Olympus</label><br>
+					        <input type="checkbox" name="Lumix" id="Lumix" value="Lumix">
+										<label for="Lumix">Lumix</label><br>
+					        <input type="checkbox" name="Pentax" id="Pentax" value="Pentax">
+										<label for="Pentax">Pentax</label><br>
+					        <input type="checkbox" name="Leica" id="Leica" value="Leica">
+										<label for="Leica">Leica</label><br>
+					        <input type="checkbox" name="Sony" id="Sony" value="Sony">
+										<label for="Sony">Sony</label><br>					    
+									    
+					        <input type="checkbox" name="Fuji" id="Fuji" value="Fuji">				
+										<label for="Fuji">Fuji</label><br>
+			
+				</div>
+			</div>	
+    		 
+    		<div class="filterBox">
+    
+    			<div class="FilterTitle" id="ctF">Category<br>
+					<input type="checkbox" name="DSLR" id="DSLR" value="DSLR">
+					<label for="DSLR">DSLR</label><br>
+					<input type="checkbox" name="PointShoot" id="PointShoot" value="Point and Shoot">
+					<label for="PointShoot">Point and Shoot</label><br>
+					<input type="checkbox" name="AdvancedAmateur" id="AdvancedAmateur" value="Advanced Amateur">
+					<label for="AdvancedAmateur">Advanced Amateur</label><br>
+					<input type="checkbox" name="Underwater" id="Underwater" value="Underwater">
+					<label for="Underwater">Underwater</label><br>
+					<input type="checkbox" name="Film" id="Film" value="Film">
+					<label for="Film">Film</label><br>
+					<input type="checkbox" name="mirrorless" id="mirrorless" value="mirrorless">
+					<label for="mirrorless">mirrorless</label><br>
+				</div>
+    		</div>  		
+    	</div>
+    </div>	
+        <div id="Main">    
+                <table class="chocolateBox" id="x">
+                    <tr><td id="y" class="ImageTd"><img id="z" src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td><input type="button" value="Add to cart"/></td></tr>
+                </table >
+                <table class="chocolateBox">
+                    <tr><td class="ImageTd"><img src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td>Add to cart</td></tr>
+                </table >
+                <table class="chocolateBox">
+                    <tr><td class="ImageTd"><img src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td>Add to cart</td></tr>
+                </table >
+              	  <table class="chocolateBox">
+                    <tr><td class="ImageTd"><img src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td>Add to cart</td></tr>
+                </table >
+                <table class="chocolateBox">
+                    <tr><td class="ImageTd"><img src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td>Add to cart</td></tr>
+                </table >
+                <table class="chocolateBox">
+                    <tr><td class="ImageTd"><img src="/jadrn046/Search.jpg" alt="Test" width="200"/></td></tr>
+                    <tr><td class="NameTd">Milk Chocolate Bar</td></tr> 
+                    <tr><td>Short description</td></tr>
+                    <tr><td>Price</td></tr>
+                    <tr><td>Add to cart</td></tr>
+                </table >            
+            </div>
+
+        </div>
+        <!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div  class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2 id="modal-header-text">Modal Header</h2>
+		    </div>
+		    <div id="modal-body" class="modal-body">
+		      <p>Some text in the Modal Body</p>
+		      <p>Some other text...</p>
+		    </div>
+		    <div  class="modal-footer">
+		      <h3 id="modal-footer-text">Modal Footer</h3>
+		    </div>
+		  </div>
+
+		</div>
+    	
+    </body>
+</html>
+
+      

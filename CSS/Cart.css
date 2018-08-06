@@ -1,0 +1,253 @@
+  #Products{
+                border: 0px solid black;
+                width: 80%;
+                margin-top:100px;
+                display: table;
+                min-height: 80vh;
+                border: 0px solid red;  
+
+            }
+            #EmptyCart{
+                width: 80%;
+                font-size: 30px;
+                position: fixed;
+                color: black;
+                top:250px;
+                left:10%;
+                
+            }
+            #ShopNowAnker{
+                text-decoration: none;
+            }
+            #ShopNow{
+                width: 250px;
+                height: 25px;
+                background-color: black;
+                color:white;
+                font-size: 25px;
+                text-align: center;
+                padding:10px;
+                padding-top: 5px; 
+                font-family: Helvetica;
+                margin-top: 20px;
+                
+            }
+            #ShopNow:hover{
+                color: red;
+            }
+            .chocolateBox{
+                width:30.5%;
+                border:1px solid rgba(79, 0, 2,.2);
+                height:80px;
+                float:left;
+                margin-left:30px;
+                margin-bottom:25px;
+                padding: 2px 5px;
+                box-shadow: 2px 2px 10px -5px #000000;
+            }
+            .ImageTd{
+                height:120px;
+                width: 110px;
+            
+            }
+            .NameTd{
+                text-align:left;
+                font-size:1.2em;
+                font-weight:bold;
+            }
+            .CartInput{
+                width:50px;
+            }
+            .OrderBox{
+                width:16%;
+                border:1px solid rgba(79, 0, 2,.2);
+                height:40vh;
+                position: fixed;
+                right:1%;
+                top:100px;
+                margin-bottom:25px;
+                padding: 50px 1%;
+                box-shadow: 2px 2px 10px -5px #000000;
+            }
+            #OrderSummary{
+                width: 100%;
+                height: 50px;
+                font-size: 28px;
+                text-align: center;
+
+            }
+            #OrderSummaryTable{
+                width: 100%;
+                margin-top: 25px; 
+                margin-bottom: 40px;
+            }
+            .Name{
+                text-align:left;
+                width: 75%;
+            }
+            .Value{
+                text-align: right;
+            }
+            #OrderNow{
+                width: 100%;
+                height: 45px;
+                background-color: #3d0006;
+                color:white;
+                font-size: 25px;
+                text-align: center;
+                padding:10px;
+                padding-top: 5px; 
+                font-family: Helvetica;
+                margin-left: 5px;
+                margin-top: 40px;
+                cursor:pointer;
+                text-decoration: none;
+
+            
+            }
+             #Form01{
+           	 font-size: 18px; 
+           }
+            #HeadID{
+                width: 100%;
+                height:100vh;
+                background-color:#e5e5e5;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                position: absolute;
+                top:0px;    
+
+            }            
+            #SDSULogo{
+                position: absolute;
+                top:15px;                
+                left:20px;            
+                width:9%;                
+            }
+            #HomeButton{
+                position: fixed;
+                top:15px;                
+                right:20px;
+                width:10%;
+                height:40px;
+                border-radius:3px;
+                background:none;             
+                font-family:sans-serif;
+                font-size:25px;
+                cursor:pointer;
+                color: black;
+                z-index: 1;
+                border:3px solid black;
+                text-align: center;
+                text-decoration: none;
+            }
+            #RegisterFromDiv{
+                width: 45%;
+                margin:6vh 27%;
+                margin-bottom: 0px;
+                border: 2px solid black;
+                border-radius: 10px;
+                display:block;
+                padding:  10px;    
+
+                background-color: rgba(0, 0, 0, 0.7);    
+            }
+            .FormTable{               
+                width: 100%;     
+
+            }
+            .InputName{
+                border: 1px solid gray;
+                border-radius: 5px;
+                width:100%;
+                font-size: 22px;
+            }
+            .InputWider{
+                border: 1px solid gray;
+                border-radius: 5px;
+                width:100%;
+                font-size: 22px;
+            }
+          
+            .InputUser{
+                font-size:22px;
+                color:#f2f2f2;
+            }
+            input[type=radio]{
+                height: 20px;
+                width: 20px;
+                font-size: 25px;
+            }
+            .SecondRadio{
+                margin-left: 30%;
+            }
+            #Photo{
+                border: 2px none gray;
+                border-radius: 5px;
+                width:70%;
+                font-size: 22px;
+                color:white;
+            }
+            #CountryCode{
+                font-size: 22px;
+                color:#f2f2f2; 
+
+            }
+            .DOBLable{
+                width:30%;
+                float:left;
+                background-color: transparent;
+                color:white;
+                border: 2px none white;
+                border-radius: 5px;
+                font-size: 22px;
+                height:110%;
+
+            }
+            .Gender{
+                border: 2px solid white;
+                border-radius: 5px;
+                width:99.4%;
+                font-size: 22px;
+                color:black;
+            }
+            #Reset{
+                background-color: transparent;
+                color:white;
+                border: 2px solid white;
+                border-radius: 5px;
+
+            }
+   			#Submit{
+                border: 1px solid gray;
+                border-radius: 5px;
+                width:100%;
+                font-size: 22px;
+                height: 35px;
+                margin-top: 5px;
+            }
+            .ConfirmMessege{
+                font-size: 22px;
+            }
+            #Error{
+                border: 2px solid white;
+                border-radius: 5px;
+                width:99.4%;
+                font-size: 22px;
+                color:#f2f2f2;               
+                display: none;
+            }
+            #ErrorMsg{
+                position:fixed;
+                top:50px;
+                left:50px;
+                width:18%;
+                border:3px solid black;
+                text-align:center;
+                border-radius: 5px;
+                padding:20px;
+                z-index: 1;
+            }
+             fieldset { 
+             	padding:0; border:0; margin-top:5px; 
+             }
